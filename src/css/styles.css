@@ -5,6 +5,7 @@
 
 a {
     color: white;
+    transition-duration: 0.2s;
 }
 
 a:hover {
