@@ -46,15 +46,27 @@ nav a:active {
     filter: brightness(0.2);
 }
 
+.color-green {
+    color: greenyellow;
+}
+
+.color-violet {
+    color: blueviolet;
+}
+
+.color-red {
+    color: red;
+}
+
+.font-weight-700 {
+    font-weight: 700;
+}
+
 .paper-text {
     padding: 1.0rem;
     white-space: pre-wrap;
     word-wrap: break-word;
     overflow-wrap: break-word;
-}
-
-banner {
-    color: greenyellow;
 }
 
 .center {
