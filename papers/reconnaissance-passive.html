@@ -14,7 +14,7 @@
         <a href="https://github.com/4forward-secure">[ Github ]</a>
     </nav>
 
-    <div>
+    <main>
         <pre class="paper-text break-line">
         <span class="ASCII color-green">
 ───────▄█──────────█─────────█▄───────
@@ -73,6 +73,8 @@
 <b class="color-violet">:: [2] Google Hacking</b>
 
 <p class="paragraph">The most common search engine for advanced searches is Google, along with a famous technique called Google Hacking. Below are some examples of Google dorks that we can use to obtain some information.</p>
+
+<div class="big-frame">
 +-----------------+-------------------+--------------------------------------------+
 | Operator/Syntax | Example           | Function                                   |
 +-----------------+-------------------+--------------------------------------------+
@@ -88,8 +90,10 @@
 +-----------------+-------------------+--------------------------------------------+
 | intext          | intext:gmail.com  | Search for specific words in source code.  |
 +-----------------+-------------------+--------------------------------------------+
+</div>
 
 <p class="paragraph">If you perform a search as illustrated below, you will see that with just a simple Google search, we can list some tango subdomains.</p>
+<div class="medium-frame">
 +--------------------------=BROWSER=-------------------------+
 |                                                            |
 |                                                            |
@@ -103,8 +107,10 @@
 |                                                            |
 |                                                            |
 +------------------------------------------------------------+
+</div>
 
 <p class="paragraph">We can also use these operators together to find a specific page/file.</p>
+<div class="medium-frame">
 +--------------------------=BROWSER=-------------------------+
 |                                                            |
 |                                                            |
@@ -118,6 +124,7 @@
 |                                                            |
 |                                                            |
 +------------------------------------------------------------+
+</div>
 
 <b class="color-violet">:: [3] crt.sh</b>
 
@@ -127,6 +134,7 @@
 
 <p class="paragraph">When we talk about dns, the first tool that should come to mind is dnsrecon; with this tool, we can do all kinds of domain listing, from searches on bing, yandex, crt.sh, to even brute force dictionaries.</p>
 <p class="paragraph">As mentioned above, you can also use the dnsrecon tool to query crt.sh. I prefer to use dnsrecon for its simplicity and practicality, rather than the website.</p>
+<div class="medium-frame-terminal">
 +-----------------------------=TERMINAL=-----------------------------+
 | blackcrw@4forward:~$ dnsrecon -d tango.com -t crt                  |
 | [*] crt: Performing Crt.sh Search Enumeration against tango.com... |
@@ -144,6 +152,7 @@
 | [*] 	 A sei.tango.com 181.94.22.4                                 |
 | [+] 40 Records Found                                               |
 +--------------------------------------------------------------------+
+</div>
 
 <p class="paragraph"><b class="color-red">note:</b> the domain tango.com is fictitious, and the ip addresses I typed in randomly.<p class="paragraph">
 <p class="paragraph">The website <a href="https://hackertarget.com/find-dns-host-records/">https://hackertarget.com/find-dns-host-records/</a> allows us to find DNS host records for a specific domain, thus enabling us to catalog target subdomains.</p>

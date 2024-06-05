@@ -89,6 +89,10 @@ nav a:active {
 }
 
 @media (max-width: 480px) {
+    nav a {
+        padding: 1rem;
+    }
+    
     .paper-text banner{
         font-size: 0.6rem;
     }
@@ -105,6 +109,10 @@ nav a:active {
 }
 
 @media (max-width: 366px) {
+    nav a {
+        padding: 0.8rem;
+    }
+    
     .paper-text banner{
         font-size: 0.4rem;
     }
