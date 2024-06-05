@@ -1,40 +1,53 @@
+html {
+    font-size: 62.5%;
+}
+
 * {
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.4rem;
 }
 
 a {
     color: white;
-    transition-duration: 0.2s;
+    transition: background-color 0.2s;
+    transition: filter 0.3s;
 }
 
 a:hover {
     color: greenyellow;
 }
 
-.nav {
+nav {
     overflow: hidden;
     background-color: black;
-    padding-left: 10px;
+    padding: 1.2rem;
+    display: flex;
+    gap: 0.4rem;
 }
 
-.nav a {
+nav a {
     float: left;
     display: block;
     text-align: center;
-    padding: 16px 20px;
+    padding: 1.6rem 2.0rem;
     text-decoration: none;
     font-family: monospace;
-    border-radius: 5px;
+    border-radius: 0.4rem;
 }
 
-.nav a:hover {
+nav a:hover {
     background-color: greenyellow;
     color: black;
 }
 
+nav a:active {
+    filter: brightness(0.2);
+}
+
 .paper-text {
-    padding: 10px;
+    padding: 1.0rem;
     white-space: pre-wrap;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -42,4 +55,48 @@ a:hover {
 
 banner {
     color: greenyellow;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .paper-text banner{
+        font-size: 0.8rem;
+    }
+    .papers,
+    .papers a,
+    .papers b {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .paper-text banner{
+        font-size: 0.6rem;
+    }
+    nav {
+        justify-content: center;
+    }
+    .papers,
+    .papers a,
+    .papers b {
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 366px) {
+    .paper-text banner{
+        font-size: 0.4rem;
+    }
+    .papers,
+    .papers a,
+    .papers b {
+        font-size: 0.8rem;
+    }
 }
