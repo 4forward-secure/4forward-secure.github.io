@@ -1,5 +1,6 @@
 main {
     padding: 0 1.4rem ;
+    width: 100vw;
 }
 
 h1 {
@@ -13,6 +14,17 @@ h1 {
 }
 
 @media (max-width: 768px) {
+    .big-frame {
+        font-size: 1.8vw;
+    }
+    .medium-frame{
+        font-size: 2.3vw;
+    }
+
+    .medium-frame-terminal{
+        font-size: 2vw;
+    }
+    
     h1 {
         font-size: 1.6rem;
     }
@@ -22,6 +34,9 @@ h1 {
 }
 
 @media (max-width: 480px) {
+    .big-frame {
+        font-size: 1.7vw;
+    }
     h1 {
         font-size: 1.2rem;
     }
