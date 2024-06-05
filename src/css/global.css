@@ -68,6 +68,7 @@ banner {
     .paper-text banner{
         font-size: 0.8rem;
     }
+
     .papers,
     .papers a,
     .papers b {
@@ -79,9 +80,11 @@ banner {
     .paper-text banner{
         font-size: 0.6rem;
     }
+
     nav {
         justify-content: center;
     }
+
     .papers,
     .papers a,
     .papers b {
@@ -89,11 +92,11 @@ banner {
     }
 }
 
-
 @media (max-width: 366px) {
     .paper-text banner{
         font-size: 0.4rem;
     }
+
     .papers,
     .papers a,
     .papers b {

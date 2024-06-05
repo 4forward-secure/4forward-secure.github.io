@@ -1,0 +1,38 @@
+main {
+    padding: 0 1.4rem ;
+}
+
+h1 {
+    font-size: 2.0rem;
+    margin-top: 2.4rem;
+}
+
+.paragraph {
+    opacity: 0.8;
+    line-height: 140%;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+    .ASCII {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 366px) {
+    .ASCII{
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.1rem;
+    }
+}
