@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/global.css">
+    <link rel="stylesheet" href="../src/css/papers.css">
+    <title>4Forward - Reconnaissance Active</title>
+</head>
+<body>
+    <nav class="nav">
+        <a href="../index.html">[ Home ]</a>
+        <a href="index.html">[ Papers ]</a>
+        <a href="https://github.com/4forward-secure" target="_blank">[ Github ]</a>
+    </nav>
+
+    <main>
+        <pre class="paper-text break-line">
+            <span class="signature-HX color-green">
+██╗░░██╗██╗░░██╗
+██║░░██║╚██╗██╔╝
+███████║░╚███╔╝░
+██╔══██║░██╔██╗░
+██║░░██║██╔╝╚██╗
+╚═╝░░╚═╝╚═╝░░╚═╝
+            </span>
+            <h1>:: Reconnaissance Active ::</h1>
+            <div class="color-violet font-weight-700">
++------SUMMARY--------+
+|                     |
+| <b>[1]</b> Introduction    |
+| <b>[2]</b> Ping            |
+| <b>[3]</b> whois           |
+| <b>[4]</b> Traceroute      |
+| <b>[5]</b> Nmap            |
+| <b>[6]</b> DNSRecon        |
+| <b>[7]</b> Conclusion      |
+|                     |
++---------------------+
+            </div>
+
+<b class="color-violet">:: [1] Introduction</b>
+<p>
+For a reconnaissance to be considered active, it is necessary to establish some type of contact with the target, which can range from social engineering techniques to a direct connection with the target system.<br>
+Active reconnaissance begins when there are direct connections to the target machine, these are actions that leave information in the system logs and can be identified as a possible intrusion.
+</p>
+
+<b class="color-violet">:: [2] Ping</b>
+
+<p>
+The purpose of the ping command is to check whether a machine is online, generally passing IP (Protocol Address) or domain name as an argument.<br>
+Ping sends an ICMP packet to a system and the system responds by sending back an ICMP Echo Reply <b>if</b> the packet is not blocked by any firewall (network security device that monitors incoming and outgoing network traffic).</p>
+<div class="medium-frame-terminal">
++-----------------------------=TERMINAL=--------------------------------+
+| <span class="color-green medium-frame-terminal">hax1zi@4forward:~$</span> ping -c 3 google.com                               |
+| PING google.com (2800:3f0:4001:838::200e) 56 data bytes               |
+| 64 bytes from 2800:3f0:4001:838::200e: icmp_seq=1 ttl=120 time=51.7 ms|
+| 64 bytes from 2800:3f0:4001:838::200e: icmp_seq=2 ttl=120 time=51.6 ms|
+| 64 bytes from 2800:3f0:4001:838::200e: icmp_seq=3 ttl=120 time=52.2 ms|
+|                                                                       |
+| --- google.com ping statistics ---                                    |
+| 3 packets transmitted, 3 received, 0% packet loss, time 2002ms        |
+| rtt min/avg/max/mdev = 51.576/51.844/52.219/0.273 m                   |                                            
++-----------------------------------------------------------------------+
+</div>
+
+<b class="color-violet">:: [3] Whois</b>
+
+<p>The whois command sends a direct query to the WHOIS server to obtain information about the domain, it requires an explicit request to the WHOIS server</p>
+<div class="small-frame-terminal">
++------------------------=TERMINAL=----------------------+
+| <span class="color-green small-frame-terminal">hax1zi@4forward:~$</span> whois google.com                    |
+|    Domain Name: GOOGLE.COM                             |
+|    Registry Domain ID: 2138514_DOMAIN_COM-VRSN         |
+|    Registrar WHOIS Server: whois.markmonitor.com       |
+|    Registrar URL: http://www.markmonitor.com           |
+|    Updated Date: 2019-09-09T15:39:04Z                  |
+|    Creation Date: 1997-09-15T04:00:00Z                 |
+|    Registry Expiry Date: 2028-09-14T04:00:00Z          |
+|    Registrar: MarkMonitor Inc.                         |
+|    ...                                                 |                                            
++--------------------------------------------------------+
+</div>
+
+<b class="color-violet">:: [4] Traceroute</b>
+
+<p>
+The function of traceroute is to trace the route taken by the packet from your system to another host, thus finding the IP addresses of the routers or hops that pcato traverses.<br>
+The command also reveals the number of routers between the two systems. However, the route taken by packets may change because some routers use dynamic routing protocols that adapt to network changes.
+</p>
+<p>The parts in <b class="color-red">red</b> are IP addresses or domains that I created</p>
+<div class="medium-frame-terminal">
++-------------------------------=TERMINAL=-------------------------------+
+| <span class="color-green medium-frame-terminal">hax1zi@4forward:~$</span> traceroute google.com                               |
+| traceroute to google.com (<span class="color-red medium-frame-terminal">xxx.xx.xx.xxx</span>), 30 hops max, 60 byte packets |
+| 1  _gateway (192.168.1.1)  0.515 ms  0.597 ms  0.673 ms                |
+| 2  <span class="color-red medium-frame-terminal">xx.x.x.x</span> (<span class="color-red medium-frame-terminal">xx.x.x.x</span>)  15.948 ms  15.994 ms  15.998 ms                |
+| 3  <span class="color-red medium-frame-terminal">xx.x.xx.x</span> (<span class="color-red medium-frame-terminal">xx.x.xx.x</span>)  15.923 ms  15.981 ms  15.987 ms              |
+| 4  <span class="color-red medium-frame-terminal">xxx-xx-xxx-xxx.hx.com</span> (<span class="color-red medium-frame-terminal">xxx.xx.xxx.xxx</span>)  15.990 ms  15.993 ms  15.997|
+| 5  <span class="color-red medium-frame-terminal">xx.x.x.xxx</span> (<span class="color-red medium-frame-terminal">xx.x.x.xxx</span>)  16.005 ms  16.018 ms  16.355 ms            |
+| 6  <span class="color-red medium-frame-terminal">xx.x.xx.xx</span> (<span class="color-red medium-frame-terminal">xx.x.xx.xx</span>)  18.391 ms  5.289 ms  17.955 ms             |
+| 7  <span class="color-red medium-frame-terminal">xx.x.xxx.x</span> (<span class="color-red medium-frame-terminal">xx.x.xxx.x</span>)  17.966 ms  17.979 ms  17.985 ms            |
+| 8  <span class="color-red medium-frame-terminal">xx.x.xxx.xx</span> (<span class="color-red medium-frame-terminal">xx.x.xxx.xx</span>)  17.997 ms  18.001 ms  18.011 ms          |
+| ...                                                                    |                                            
++------------------------------------------------------------------------+
+</div>
+
+<b class="color-violet">:: [5] Nmap</b>
+<p>
+Active reconnaissance with Nmap is a technique used to discover active devices on a network and information about them, such as operating systems, running services and open ports. <br>
+  <span class="color-red">-sS</span>: This argument indicates a SYN scan (does not complete a connection) so it is a quick and silent scan <br>
+  <span class="color-red">-O</span>: This argument serves to try to identify the target's operating system
+</p>
+<p>The parts in <b class="color-red">red</b> are IP addresses or domains that I created</p>
+<div class="small-frame-terminal">
++---------------------=TERMINAL=-------------------+
+| <span class="color-green small-frame-terminal">hax1zi@4forward:~$</span>sudo nmap -sS <span class="color-red medium-frame-terminal">hax1zi.com</span>       |
+| ...                                              |
+| Not shown: 996 filtered tcp ports (no-response)  |
+| PORT     STATE SERVICE                           |
+| 80/tcp   open  http                              |
+| 443/tcp  open  https                             |
+| 8080/tcp open  http-proxy                        |
+| 8443/tcp open  https-alt                         |
+| ...                                              |                                            
++--------------------------------------------------+
+</div>
+
+<b class="color-violet">:: [6] DNSRecon</b>
+<p>
+DNSrecon is an open source tool generally used to discover information about the DNS record (Domain Name System - System that translates domain names to IP addresses). <br>
+In active reconnaissance we use DNSrecon to explore the DNS of a domain or network and thus map subdomains, enumerate hosts and collect DNS records.    
+</p>
+<p>The parts in <b class="color-red">red</b> are IP addresses or domains that I created</p>
+<div class="medium-frame-terminal">
++-------------------------------=TERMINAL=-------------------------------+
+| <span class="color-green medium-frame-terminal">hax1zi@4forward:~$</span> dnsrecon -d <span class="color-red">hax1zi.com</span>                              |
+| <span class="color-green medium-frame-terminal">[*]</span> std: Performing General Enumeration against: hax1zi.com...         |
+| <span class="color-red medium-frame-terminal">[-]</span> All nameservers failed to answer the DNSSEC query for hax1zi.com   |
+| <span class="color-green medium-frame-terminal">[*]</span> 	 SOA ns1.hax1zi.com <span class="color-red medium-frame-terminal">xxx.xxx.xx.xx</span>                                |
+| <span class="color-green medium-frame-terminal">[*]</span> 	 NS ns4.hax1zi.com <span class="color-red medium-frame-terminal">xxx.xxx.xx.xx</span>                                 |
+| <span class="color-green medium-frame-terminal">[*]</span> 	 NS ns3.hax1zi.com <span class="color-red medium-frame-terminal">xxx.xxx.xx.xx</span>                                 |
+| <span class="color-green medium-frame-terminal">[*]</span> 	 NS ns1.hax1zi.com <span class="color-red medium-frame-terminal">xxx.xxx.xx.xx</span>                                 |
+| ...                                                                    |                                            
++------------------------------------------------------------------------+
+</div>
+
+<b class="color-violet">:: [7] Conclusion</b>
+<p>
+General reconnaissance is a very important part of an attack and active reconnaissance is the last part of reconnaissance for the next stage. <br>
+However, remember that active reconnaissance generates logs, and some techniques can be identified as attacks. Therefore, carry out this step with caution and responsibility.
+</p>
++---------------------+
+| <b>Github:</b> <a href="https://github.com/hax1zi" target="_blank">hax1zi</a>      |
++---------------------+
+        </pre>
+    </main>
+</body>
+</html>
