@@ -1,5 +1,5 @@
 main {
-    padding: 0 1.4rem ;
+    padding: 0 0.8rem ;
     width: 100vw;
 }
 
@@ -23,6 +23,10 @@ h1 {
 
     .medium-frame-terminal{
         font-size: 2vw;
+    }
+
+    .small-frame-terminal{
+        font-size: 2.5vw;
     }
     
     h1 {
@@ -48,6 +52,6 @@ h1 {
     }
 
     h1 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 }

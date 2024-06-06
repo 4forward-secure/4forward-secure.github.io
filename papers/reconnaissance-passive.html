@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="../src/css/papers.css">
     <title>4Forward - Reconnaissance Passive</title>
 </head>
-<body style="background-color: black; color: white;">
+<body>
     <nav class="nav">
         <a href="../index.html">[ Home ]</a>
         <a href="index.html">[ Papers ]</a>
         <a href="../members/index.html">[ Members ]</a>
-        <a href="https://github.com/4forward-secure">[ Github ]</a>
+        <a href="https://github.com/4forward-secure" target="_blank">[ Github ]</a>
     </nav>
 
     <main>
@@ -63,13 +63,14 @@
 
 <b class="color-violet">:: [1] Introduction</b>
 
-<p class="paragraph">Attention: It is worth remembering that it is extremely important to save the information obtained in the recognition phase in a notepad, as you can be sure that you will use it later on.</p>
-<p class="paragraph">Hypothetically, consider that we are targeting the website https://www.tango.com/ and we want to perform reconnaissance on this target, finding subdomains, important directories, files, social networks, and publicly accessible information. This phase is of utmost importance as it will define how and where our possible entry points will be.</p>
-<p class="paragraph">We have two paths to follow, passive or aggressive reconnaissance. We will always start by using the passive path, as we do not want to alert the target about our presence and intentions.</p>
-<p class="paragraph">In this endeavor, your best ally will be Google and/or other search engines, either to find other sites that perform target reconnaissance or to conduct advanced searches yourself.</p>
-<p class="paragraph">I will talk more about Google, as it is the most common and famous, but below you will find documentation for other search engines.</p>
-1. <a href="https://duckduckgo.com/duckduckgo-help-pages/results/syntax/">DuckDuckGo Search Syntax</a>
-2. <a href="https://support.microsoft.com/en-us/topic/advanced-search-keywords-ea595928-5d63-4a0b-9c6b-0b769865e78a">Bing Advanced Search</a>
+<p class="paragraph">Attention: It is worth remembering that it is extremely important to save the information obtained in the recognition phase in a notepad, as you can be sure that you will use it later on. <br>
+Hypothetically, consider that we are targeting the website https://www.tango.com/ and we want to perform reconnaissance on this target, finding subdomains, important directories, files, social networks, and publicly accessible information. This phase is of utmost importance as it will define how and where our possible entry points will be. <br>
+We have two paths to follow, passive or aggressive reconnaissance. We will always start by using the passive path, as we do not want to alert the target about our presence and intentions. <br>
+In this endeavor, your best ally will be Google and/or other search engines, either to find other sites that perform target reconnaissance or to conduct advanced searches yourself. <br>
+I will talk more about Google, as it is the most common and famous, but below you will find documentation for other search engines. 
+</p>
+1. <a href="https://duckduckgo.com/duckduckgo-help-pages/results/syntax/" target="_blank">DuckDuckGo Search Syntax</a>
+2. <a href="https://support.microsoft.com/en-us/topic/advanced-search-keywords-ea595928-5d63-4a0b-9c6b-0b769865e78a" target="_blank">Bing Advanced Search</a>
 
 <b class="color-violet">:: [2] Google Hacking</b>
 
@@ -111,6 +112,7 @@
 </div>
 
 <p class="paragraph">We can also use these operators together to find a specific page/file.</p>
+
 <div class="medium-frame">
 +--------------------------=BROWSER=-------------------------+
 |                                                            |
@@ -133,11 +135,13 @@
 
 <b class="color-violet">:: [4] dnsrecon</b>
 
-<p class="paragraph">When we talk about dns, the first tool that should come to mind is dnsrecon; with this tool, we can do all kinds of domain listing, from searches on bing, yandex, crt.sh, to even brute force dictionaries.</p>
-<p class="paragraph">As mentioned above, you can also use the dnsrecon tool to query crt.sh. I prefer to use dnsrecon for its simplicity and practicality, rather than the website.</p>
+<p class="paragraph">When we talk about dns, the first tool that should come to mind is dnsrecon; with this tool, we can do all kinds of domain listing, from searches on bing, yandex, crt.sh, to even brute force dictionaries.<br>
+As mentioned above, you can also use the dnsrecon tool to query crt.sh. I prefer to use dnsrecon for its simplicity and practicality, rather than the website.
+</p>
+
 <div class="medium-frame-terminal">
 +-----------------------------=TERMINAL=-----------------------------+
-| blackcrw@4forward:~$ dnsrecon -d tango.com -t crt                  |
+| <span class="color-green medium-frame-terminal">blackcrw@4forward:~$</span> dnsrecon -d tango.com -t crt                  |
 | [*] crt: Performing Crt.sh Search Enumeration against tango.com... |
 | [*] 	 A saudedigital.tango.com 181.35.40.31                       |
 | [*] 	 A saudedigitalvr.tango.com 181.35.40.31                     |
@@ -155,29 +159,33 @@
 +--------------------------------------------------------------------+
 </div>
 
-<p class="paragraph"><b class="color-red">note:</b> the domain tango.com is fictitious, and the ip addresses I typed in randomly.<p class="paragraph">
-<p class="paragraph">The website <a href="https://hackertarget.com/find-dns-host-records/">https://hackertarget.com/find-dns-host-records/</a> allows us to find DNS host records for a specific domain, thus enabling us to catalog target subdomains.</p>
+<p class="paragraph"><b class="color-red">note:</b> the domain tango.com is fictitious, and the ip addresses I typed in randomly.<br>
+The website <a href="https://hackertarget.com/find-dns-host-records/" target="_blank">https://hackertarget.com/find-dns-host-records/</a> allows us to find DNS host records for a specific domain, thus enabling us to catalog target subdomains.
+</p>
 
 <b class="color-violet">:: [5] Wappalyzer</b>
 
-<p class="paragraph">We can use Wappalyzer to find out which front/back-end frameworks the target is running on that site. This is simple information, but it will be useful in our future goals, as it will allow us to test for another range of vulnerabilities.</p>
-<p class="paragraph">Wappalyzer is a browser extension, available for download from the Google Chrome and Firefox stores.</p>
-<p class="paragraph">This extremely useful extension returns data such as the server's operating system, system version, page programming language and so on.</p>
+<p class="paragraph">We can use Wappalyzer to find out which front/back-end frameworks the target is running on that site. This is simple information, but it will be useful in our future goals, as it will allow us to test for another range of vulnerabilities.<br>
+Wappalyzer is a browser extension, available for download from the Google Chrome and Firefox stores.<br>
+This extremely useful extension returns data such as the server's operating system, system version, page programming language and so on.
+</p>
 
 <b class="color-violet">:: [6] Shodan</b>
 
-<p class="paragraph">Using the server IP or DNS obtained using the dnsrecon tool, we can search the internet for that particular IP. For this process we have a great ally, Shodan, also known as the hacker's Google.</p>
-<p class="paragraph">If you go to <a href="https://www.shodan.io">https://www.shodan.io</a>, you'll see that there's a search field, just enter the IP address and you'll see a range of information appear. Information such as open ports, possible vulnerabilities and you don't even have to communicate directly with the server.</p>
+<p class="paragraph">Using the server IP or DNS obtained using the dnsrecon tool, we can search the internet for that particular IP. For this process we have a great ally, Shodan, also known as the hacker's Google.<br>
+If you go to <a href="https://www.shodan.io" target="_blank">https://www.shodan.io</a>, you'll see that there's a search field, just enter the IP address and you'll see a range of information appear. Information such as open ports, possible vulnerabilities and you don't even have to communicate directly with the server.
+</p>
 
 <b class="color-violet">:: [7] Conclusion</b>
 
-<p class="paragraph">In this paper you have learned how to carry out the first phase of a pentest/red team operation, which is target reconnaissance.</p>
-<p class="paragraph">Now I'd like to thank you for making it this far, and I hope that I've been able to contribute in some way to your studies.</p>
+<p class="paragraph">In this paper you have learned how to carry out the first phase of a pentest/red team operation, which is target reconnaissance.<br>
+Now I'd like to thank you for making it this far, and I hope that I've been able to contribute in some way to your studies.
+</p>
 
 +---------------------+
-| <b>Github:</b> <a href="https://github.com/blackcrw">blackcrw</a>    |
+| <b>Github:</b> <a href="https://github.com/blackcrw" target="_blank">blackcrw</a>    |
 +---------------------+
         </pre>    
-    </div>
+    </main>
 </body>
 </html>
