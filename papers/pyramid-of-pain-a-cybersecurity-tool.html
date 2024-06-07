@@ -18,37 +18,22 @@
     <main>
         <pre class="paper-text break-line">
 <span class="ASCII color-green">
-__________________¶________________¶
-_________________¶¶________________¶¶
-_______________¶¶¶__________________¶¶¶
-_____________¶¶¶¶____________________¶¶¶¶
-____________¶¶¶¶¶____________________¶¶¶¶¶
-___________¶¶¶¶¶______________________¶¶¶¶¶
-__________¶¶¶¶¶¶______________________¶¶¶¶¶¶
-__________¶¶¶¶¶¶¶__¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶__¶¶¶¶¶¶¶
-__________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
-___________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
-____________¶¶¶¶¶¶¶¶____¶¶¶¶¶¶____¶¶¶¶¶¶¶¶
-___¶________¶¶¶¶¶¶¶______¶¶¶¶______¶¶¶¶¶¶¶
-___¶_______¶¶¶¶¶¶¶¶___O_¶¶¶¶¶__O__¶¶¶¶¶¶¶¶
-__¶¶¶______¶¶¶¶¶¶¶¶¶____¶¶¶¶¶¶____¶¶¶¶¶¶¶¶¶
-__¶¶¶_____¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
-_¶¶¶¶¶____¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶__¶¶
-_¶¶¶¶¶____¶¶¶__¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶__¶¶¶
-___¶¶_____¶¶¶__¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶__¶¶¶
-___¶¶______¶¶¶_____¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶_____¶¶
-____¶¶______¶¶________¶¶¶¶¶¶¶¶¶¶_______¶¶
-_____¶¶______¶¶¶_______________________¶
-_____¶¶________¶¶____¶¶¶¶¶¶¶¶¶¶¶______¶
-______¶¶________¶¶¶_____¶¶¶¶¶¶¶¶¶¶¶__¶
-_______¶¶__________¶¶¶_____¶¶¶¶¶¶¶¶¶¶
-_________¶¶___________¶¶¶¶¶__¶¶¶¶¶¶¶¶¶
-_____________________________¶¶¶¶¶¶¶¶¶¶
-______________________________¶¶¶¶¶¶¶¶¶
-_______________________________¶¶¶¶¶¶¶</span>
+                                           _L/L
+                                         _LT/l_L_
+                                       _LLl/L_T_lL_
+                   _T/L              _LT|L/_|__L_|_L_
+                 _Ll/l_L_          _TL|_T/_L_|__T__|_l_
+               _TLl/T_l|_L_      _LL|_Tl/_|__l___L__L_|L_
+             _LT_L/L_|_L_l_L_  _'|_|_|T/_L_l__T _ l__|__|L_
+           _Tl_L|/_|__|_|__T _LlT_|_Ll/_l_ _|__[ ]__|__|_l_L_
+    jjs_ _LT_l_l/|__|__l_T _T_L|_|_|l/___|__ | _l__|_ |__|_T_L_  __
+
+                           nn_r   nn_r                 __
+                     __   /l(\   /l)\      nn_r
+               __                         /\(\    __
+</span>
 
 <h1>:: Pyramid Of Pain: a Cybersecurity Tool ::</h1>
-
 <div class="color-violet font-weight-700">
 +------=SUMMARY=------+
 | <b>[01]</b> Introduction   |
@@ -82,7 +67,6 @@ _______________________________¶¶¶¶¶¶¶</span>
 
 <p class="paragraph">As the first step in this demonstration, I will compile my program and then generate the MD5 hash using the “md5sum” command.</p>
 <p class="paragraph">After generating the hash, I'll use msfvenom to generate the backdoor and infect my program. This way you can see that the hash of the original program is completely different from the hash of the infected program.</p>
-
 +------------------------------=TERMINAL=-------------------------------+
 | <b class="color-red">blackcrw@4forward:~/$</b> g++ program.cpp -o program                      |
 | <b class="color-red">blackcrw@4forward:~/$</b> md5sum program                                  |
@@ -109,7 +93,11 @@ _______________________________¶¶¶¶¶¶¶</span>
 
 <b>[ IP Addresses ]</b>
 
-<p class="paragraph">IP addresses are one step above hash values ​​in the pyramid. IP addresses can provide information about the attacker's geographic location as well as the infrastructure used in the attack. However, just like hash values, IP addresses can also be easily changed or disguised by attackers.</p>
+<p class="paragraph">IP addresses are one step above hash values in the pyramid and are the fingerprints of devices on the internet. They can help trace the geographic location and infrastructure used by the attacker, but only if the hacker isn't hiding their tracks. Using proxies and VPNs is practically a free pass to circumvent this and keep the identity anonymous.</p>
+› FastFlux ‹
+<div style="margin-left: 20px;">
+
+</div>
 
 <b>[ Domain Names ]</b>
 
