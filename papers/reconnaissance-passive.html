@@ -20,101 +20,62 @@
     <main>
         <header class="color-green">
             <pre class="ASCII">
-───────▄█──────────█─────────█▄───────
-─────▐██──────▄█──███──█▄─────██▌─────
-────▐██▀─────█████████████────▀██▌────
-───▐██▌─────██████████████─────▐██▌───
-───████────████████████████────████───
-──▐█████──██████████████████──█████▌──
-───████████████████████████████████───
-────███████▀▀████████████▀▀███████────
-─────█████▌──▄▄─▀████▀─▄▄──▐█████─────
-───▄▄██████▄─▀▀──████──▀▀─▄██████▄▄───
-──██████████████████████████████████──
-─████████████████████████████████████─
-▐██████──███████▀▄██▄▀███████──██████▌
-▐█████────██████████████████────█████▌
-▐█████─────██████▀──▀██████─────█████▌
-─█████▄─────███────────███─────▄█████─
-──██████─────█──────────█─────██████──
-────█████────────────────────█████────
-─────█████──────────────────█████─────
-──────█████────────────────█████──────
-───────████───▄────────▄───████───────
-────────████─██────────██─████────────
-────────████████─▄██▄─████████────────
-───────████████████████████████───────
-───────████████████████████████───────
-────────▀█████████▀▀█████████▀────────
-──────────▀███▀────────▀███▀──────────
+            mm::  ::                      
+          ::::::  ::                      
+        ++::::::  ::                      
+        ::::::mm  ::                      
+      ::::::::mm  ::mm                    
+    @@::::::::mm  ::mm::                  
+    ::::::::::mm  ::mm::::                
+    ::::::::::mm  ::mm::::::              
+  ++::::::::::mm  ::mm::::::::            
+  ::::::::::::::  ::mm::::::::::          
+  ::::::::::::::  ::mm::::::::::::        
+                  ::                      
+ ::::::::::::::::::::::::::::::::MM      
+   ::::::::::::::::::::::::::::::        
+      ::::::::::::::::::::::::++
             </pre>
         </header>
 
-        <h1>:: Reconnaissance Passive ::</h1>
-            <summary class="color-violet font-weight-700">
-                <pre>
-+------SUMMARY--------+
-|                     |
-| <b>[1]</b> Introduction    |
-| <b>[2]</b> Google Hacking  |
-| <b>[3]</b> crt.sh          |
-| <b>[4]</b> DNSRecon        |
-| <b>[5]</b> Wappalyzer      |
-| <b>[6]</b> Shodan          |
-| <b>[7]</b> Conclusion      |
-|                     |
-+---------------------+
-                </pre>
-            </summary>
+        <h3>[ reconnaissance passive ]</h3>
+        <br>
+        <summary class="color-violet font-weight-700">
+            <pre>
++-------------------------+
+|                         |
+|  <a href="#introduction"><b>[01]</b> - Introdução</a>      |
+|  <a href="#google-hacking"><b>[02]</b> - Google Hacking</a>  |
+|  <a href="#crt-sh"><b>[03]</b> - crt.sh</a>          |
+|  <a href="#dnsrecon"><b>[04]</b> - DNSRecon</a>        |
+|  <a href="#wappalyzer"><b>[05]</b> - Wappalyzer</a>      |
+|  <a href="#shodan"><b>[06]</b> - Shodan</a>          |
+|  <a href="#conclusion"><b>[07]</b> - Conclusão</a>       |
+|                         |
++-------------------------+
+            </pre>
+        </summary>
+        <div class="content">
+            <ul>
+                <li id="introduction">
+                    <h3>[ Introduction ]</h3>
+                    <p>Attention: It is worth remembering that it is extremely important to save the information obtained in the recognition phase in a notepad, as you can be sure that you will use it later on.</p>
+                    <p>Hypothetically, consider that we are targeting the website https://www.tango.com/ and we want to perform reconnaissance on this target, finding subdomains, important directories, files, social networks, and publicly accessible information. This phase is of utmost importance as it will define how and where our possible entry points will be.</p>
+                    <p>We have two paths to follow, passive or aggressive reconnaissance. We will always start by using the passive path, as we do not want to alert the target about our presence and intentions.</p>
+                    <p>In this endeavor, your best ally will be Google and/or other search engines, either to find other sites that perform target reconnaissance or to conduct advanced searches yourself.</p>
+                    <p>I will talk more about Google, as it is the most common and famous, but below you will find documentation for other search engines.</p>
 
-            <div class="content">
-                <ul>
-                    <li>
-                        <h2 class="color-violet">:: [1] Introduction</h2>
-                        
-                        <p>
-                            Attention: It is worth remembering that it is extremely important to save the information obtained in the recognition phase in a notepad, as you can be sure that you will use it later on.
-                        </p>
-
+                    <p>
+                        <a href="https://duckduckgo.com/duckduckgo-help-pages/results/syntax/" target="_blank">DuckDuckGo Search Syntax</a>
                         <br>
-                        <p> 
-                            Hypothetically, consider that we are targeting the website https://www.tango.com/ and we want to perform reconnaissance on this target, finding subdomains, important directories, files, social networks, and publicly accessible information. This phase is of utmost importance as it will define how and where our possible entry points will be. 
+                        <a href="https://support.microsoft.com/en-us/topic/advanced-search-keywords-ea595928-5d63-4a0b-9c6b-0b769865e78a" target="_blank">Bing Advanced Search</a>
+                    </p>
+                </li>
+                <li id="google-hacking">
+                    <h3>[ Google Hacking ]</h3>
+                    <p>The most common search engine for advanced searches is Google, along with a famous technique called Google Hacking. Below are some examples of Google dorks that we can use to obtain some information.</p>
 
-                        </p>
-                        <br>
-                        <p>
-                            We have two paths to follow, passive or aggressive reconnaissance. We will always start by using the passive path, as we do not want to alert the target about our presence and intentions. 
-                        </p>
-
-                        <br>
-
-                        <p>
-                            In this endeavor, your best ally will be Google and/or other search engines, either to find other sites that perform target reconnaissance or to conduct advanced searches yourself. 
-                        </p>
-
-                        <br>
-
-                        <p>
-                            I will talk more about Google, as it is the most common and famous, but below you will find documentation for other search engines. 
-                        </p>
-                        
-                        <div class="links">
-                            <h3>
-                                1. <a href="https://duckduckgo.com/duckduckgo-help-pages/results/syntax/" target="_blank">DuckDuckGo Search Syntax</a>
-                            </h3>
-                            <h3>
-                                2. <a href="https://support.microsoft.com/en-us/topic/advanced-search-keywords-ea595928-5d63-4a0b-9c6b-0b769865e78a" target="_blank">Bing Advanced Search</a>
-                            </h3>
-                        </div>
-                    </li>
-                    <li>
-                        <h2 class="color-violet">:: [2] Google Hacking</h2>
-                        
-                        <p>
-                            The most common search engine for advanced searches is Google, along with a famous technique called Google Hacking. Below are some examples of Google dorks that we can use to obtain some information.
-                        </p>
-                        <br>
-                        <pre class="big-frame">
+                    <pre class="big-frame">
 +-----------------+-------------------+--------------------------------------------+
 | Operator/Syntax | Example           | Function                                   |
 +-----------------+-------------------+--------------------------------------------+
@@ -130,16 +91,12 @@
 +-----------------+-------------------+--------------------------------------------+
 | intext          | intext:gmail.com  | Search for specific words in source code.  |
 +-----------------+-------------------+--------------------------------------------+
-                        </pre>
+                    </pre>
 
-                        <p>
-                            If you perform a search as illustrated below, you will see that with just a simple Google search, we can list some tango subdomains.
-                        </p>
+                    <p>If you perform a search as illustrated below, you will see that with just a simple Google search, we can list some tango subdomains.</p>
 
-                        <br>
-
-                        <pre class="medium-frame">
-+--------------------------=BROWSER=-------------------------+
+                    <pre class="medium-frame">
++---[ browser ]----------------------------------------------+
 |                                                            |
 |                                                            |
 |                                                            |
@@ -152,16 +109,11 @@
 |                                                            |
 |                                                            |
 +------------------------------------------------------------+
-                        </pre>
+                    </pre>
                         
-                        <p>
-                            We can also use these operators together to find a specific page/file.
-                        </p>
-
-                        <br>
-                        
-                        <pre class="medium-frame">
-+--------------------------=BROWSER=-------------------------+
+                    <p>We can also use these operators together to find a specific page/file.</p>
+                    <pre class="medium-frame">
++----[ browser ]---------------------------------------------+
 |                                                            |
 |                                                            |
 |                                                            |
@@ -173,31 +125,25 @@
 |                                                            |
 |                                                            |
 |                                                            |
-+------------------------------------------------------------+
-                        </pre>
-                    </li>
-                    <li>
-                        <h2 class="color-violet">:: [3] crt.sh</h2>
-                        
-                        <p>
-                            By directing our reconnaissance towards gathering valuable information about subdomains, we can take advantage of the resources of the <a href="https://crt.sh/">https://crt.sh/</a> website. This website offers a unique service that allows us to delve into the information on our tango's SSL certificate. By doing so, we can discover any domains that are directly associated with their certificate.
-                        </p>
-                    </li>
-                    <li>
-                        <h2 class="color-violet">:: [4] dnsrecon</h2>
-                        
-                        <p>
-                            When we talk about dns, the first tool that should come to mind is dnsrecon; with this tool, we can do all kinds of domain listing, from searches on bing, yandex, crt.sh, to even brute force dictionaries.
-                        </p>    
-                        <br>
-                        <p>
-                            As mentioned above, you can also use the dnsrecon tool to query crt.sh. I prefer to use dnsrecon for its simplicity and practicality, rather than the website.
-                        </p>
++------------------------------------------------------------+</pre>
+                </li>
+                <li id="crt-sh">
+                    <h3>[ crt.sh ]</h3>
+                    <p>
+                        By directing our reconnaissance towards gathering valuable information about subdomains, we can take advantage of the resources of the <a href="https://crt.sh/">https://crt.sh/</a> website. This website offers a unique service that allows us to delve into the information on our tango's SSL certificate. By doing so, we can discover any domains that are directly associated with their certificate.
+                    </p>
+                </li>
+                <li id="dnsrecon">
+                    <h3>[ dnsrecon ]</h3>
+                    <p>
+                        When we talk about dns, the first tool that should come to mind is dnsrecon; with this tool, we can do all kinds of domain listing, from searches on bing, yandex, crt.sh, to even brute force dictionaries.
+                    </p>
+                    <p>
+                        As mentioned above, you can also use the dnsrecon tool to query crt.sh. I prefer to use dnsrecon for its simplicity and practicality, rather than the website.
+                    </p>
 
-                        <br>
-
-                        <pre class="medium-frame-terminal">
-+-----------------------------=TERMINAL=-----------------------------+
+                    <pre class="medium-frame-terminal">
++---[ terminal ]-----------------------------------------------------+
 | <span class="color-green medium-frame-terminal">blackcrw@4forward:~$</span> dnsrecon -d tango.com -t crt                  |
 | [*] crt: Performing Crt.sh Search Enumeration against tango.com... |
 | [*] 	 A saudedigital.tango.com 181.35.40.31                       |
@@ -214,73 +160,44 @@
 | [*] 	 A sei.tango.com 181.94.22.4                                 |
 | [+] 40 Records Found                                               |
 +--------------------------------------------------------------------+
-                        </pre>
-                        
-                        <p>
-                            <b class="color-red">note:</b> the domain tango.com is fictitious, and the ip addresses I typed in randomly.
-                        </p>
-                        
-                        <br>
-
-                        <p>
-                            The website <a href="https://hackertarget.com/find-dns-host-records/" target="_blank">https://hackertarget.com/find-dns-host-records/</a> allows us to find DNS host records for a specific domain, thus enabling us to catalog target subdomains.
-                        </p>
-                    </li>
-                    <li>
-                        <h2 class="color-violet">:: [5] Wappalyzer</h2>
-                        
-                        <p>
-                            We can use Wappalyzer to find out which front/back-end frameworks the target is running on that site. This is simple information, but it will be useful in our future goals, as it will allow us to test for another range of vulnerabilities.
-                        </p>    
-                        
-                        <br>
-                        
-                        <p>
-                            Wappalyzer is a browser extension, available for download from the Google Chrome and Firefox stores.
-                        </p>
-                        
-                        <br>
-
-                        <p>
-                            This extremely useful extension returns data such as the server's operating system, system version, page programming language and so on.
-                        </p>
-                    </li>
-                    <li>
-                        <h2 class="color-violet">:: [6] Shodan</h2>
-                        
-                        <p>
-                            Using the server IP or DNS obtained using the dnsrecon tool, we can search the internet for that particular IP. For this process we have a great ally, Shodan, also known as the hacker's Google.
-                        </p>    
-
-                        <br>
-
-                        <p>
-                            If you go to <a href="https://www.shodan.io" target="_blank">https://shodan.io</a>, you'll see that there's a search field, just enter the IP address and you'll see a range of information appear. Information such as open ports, possible vulnerabilities and you don't even have to communicate directly with the server.
-                        </p>
-                    </li>
-                    <li>
-                        <h2 class="color-violet">:: [7] Conclusion</h2>
-                        
-                        <p>
-                            In this paper you have learned how to carry out the first phase of a pentest/red team operation, which is target reconnaissance.
-                        <p>
-
-                        <br>
-
-                        <p>
-                            Now I'd like to thank you for making it this far, and I hope that I've been able to contribute in some way to your studies.
-                        </p>
-                    </li>
-                </ul>
-                <footer>
-                    <pre class="paper-text">
-+----------------+
-| <b>Github:</b> <a href="https://github.com/blkzy" target="_blank">blkzy</a>  |
-+----------------+
                     </pre>
-                </footer>
-            </div>
-        </pre>    
+
+                    <p><b class="color-red">note:</b> the domain tango.com is fictitious, and the ip addresses I typed in randomly.</p>
+                    <p>
+                        The website <a href="https://hackertarget.com/find-dns-host-records/" target="_blank">https://hackertarget.com/find-dns-host-records/</a> allows us to find DNS host records for a specific domain, thus enabling us to catalog target subdomains.
+                    </p>
+                </li id="wappalyzer">
+                <li>
+                    <h3>[ Wappalyzer ]</h3>
+                    <p>
+                        We can use Wappalyzer to find out which front/back-end frameworks the target is running on that site. This is simple information, but it will be useful in our future goals, as it will allow us to test for another range of vulnerabilities.
+                    </p>
+                    <p>Wappalyzer is a browser extension, available for download from the Google Chrome and Firefox stores.</p>
+                    <p>
+                        This extremely useful extension returns data such as the server's operating system, system version, page programming language and so on.
+                    </p>
+                </li>
+                <li id="shodan">
+                    <h3>[ Shodan ]</h3>
+                    <p>
+                        Using the server IP or DNS obtained using the dnsrecon tool, we can search the internet for that particular IP. For this process we have a great ally, Shodan, also known as the hacker's Google.
+                        </p>
+                    <p>
+                        If you go to <a href="https://www.shodan.io" target="_blank">https://shodan.io</a>, you'll see that there's a search field, just enter the IP address and you'll see a range of information appear. Information such as open ports, possible vulnerabilities and you don't even have to communicate directly with the server.
+                    </p>
+                </li>
+                <li id="conclusion">
+                    <h3>[ Conclusão ]</h3>
+                    <p>In this paper you have learned how to carry out the first phase of a pentest/red team operation, which is target reconnaissance.<p>
+                    <p>Now I'd like to thank you for making it this far, and I hope that I've been able to contribute in some way to your studies.</p>
+                </li>
+            </ul>
+            <footer>
+                <pre class="paper-text">
+[ <a href="https://4forward-secure.github.io/members/blkzy.html" target="_blank">@blkz</a> ] [ <a href="https://github.com/blkzy" target="_blank">github</a> ]
+                </pre>
+            </footer>
+        </div>  
     </main>
 </body>
 </html>
