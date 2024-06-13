@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="../src/css/global.css">
     <link rel="stylesheet" href="../src/css/papers.css">
-    <title>4Forward - Reconhecimento Passivo</title>
+    <title>4Forward - Reconnaissance Passive</title>
 </head>
 <body>
     <nav class="nav">
@@ -38,7 +38,7 @@
             </pre>
         </header>
 
-        <h3>[ Reconhecimento Passivo ]</h3>
+        <h3>[ reconnaissance passive ]</h3>
         <br>
         <summary class="color-violet font-weight-700">
             <pre>
@@ -58,12 +58,12 @@
         <div class="content">
             <ul>
                 <li id="introduction">
-                    <h3>[ Introdução ]</h3>
-                    <p>Hipoteticamente, considere que estamos visando o site https://www.tango.com/ e queremos fazer um reconhecimento desse alvo, encontrando subdomínios, diretórios importantes, arquivos, redes sociais e informações de acesso público, então, é isso que aprenderá neste paper. Essa fase é de extrema importância, pois definirá como e onde estarão nossos possíveis pontos de entrada.</p>
-                    <p>E claro, é extremamente importante salvar as informações obtidas na fase de reconhecimento em um bloco de notas, pois você pode ter certeza de que as usará mais tarde.</p>
-                    <p>Temos dois caminhos a seguir: reconhecimento passivo ou agressivo. Porém, obviamente sempre começaremos usando o caminho passivo, pois não queremos alertar o alvo sobre nossa presença e nossas intenções.</p>
-                    <p>Nesse esforço, seu melhor aliado será o Google e/ou outros mecanismos de pesquisa, seja para encontrar outros sites que realizam reconhecimento de alvos ou para realizar pesquisas avançadas por conta própria.</p>
-                    <p>Falarei mais sobre o Google, pois ele é o mais comum e famoso, mas abaixo você encontrará documentação para outros mecanismos de pesquisa.</p>
+                    <h3>[ Introduction ]</h3>
+                    <p>Attention: It is worth remembering that it is extremely important to save the information obtained in the recognition phase in a notepad, as you can be sure that you will use it later on.</p>
+                    <p>Hypothetically, consider that we are targeting the website https://www.tango.com/ and we want to perform reconnaissance on this target, finding subdomains, important directories, files, social networks, and publicly accessible information. This phase is of utmost importance as it will define how and where our possible entry points will be.</p>
+                    <p>We have two paths to follow, passive or aggressive reconnaissance. We will always start by using the passive path, as we do not want to alert the target about our presence and intentions.</p>
+                    <p>In this endeavor, your best ally will be Google and/or other search engines, either to find other sites that perform target reconnaissance or to conduct advanced searches yourself.</p>
+                    <p>I will talk more about Google, as it is the most common and famous, but below you will find documentation for other search engines.</p>
 
                     <p>
                         <a href="https://duckduckgo.com/duckduckgo-help-pages/results/syntax/" target="_blank">DuckDuckGo Search Syntax</a>
@@ -73,30 +73,30 @@
                 </li>
                 <li id="google-hacking">
                     <h3>[ Google Hacking ]</h3>
-                    <p>O mecanismo de pesquisa mais comum para pesquisas avançadas é o Google, juntamente com uma técnica famosa chamada Google Hacking. Abaixo estão alguns exemplos de Google dorks que podemos usar para obter algumas informações.</p>
+                    <p>The most common search engine for advanced searches is Google, along with a famous technique called Google Hacking. Below are some examples of Google dorks that we can use to obtain some information.</p>
 
                     <pre class="big-frame">
-+-----------------+-------------------+-------------------------------------------------------------+
-|     Syntax      |      Exemplo      |                           Função                            |
-+-----------------+-------------------+-------------------------------------------------------------+
-| site            | site:tango.com    | Pesquisar um site específico.                               |
-+-----------------+-------------------+-------------------------------------------------------------+
-| related         | related:tango.com | Pesquisar sites relacionados.                               |
-+-----------------+-------------------+-------------------------------------------------------------+
-| ""              | "phrase or word"  | Encontre resultados com a frase exata da pesquisa.          |
-+-----------------+-------------------+-------------------------------------------------------------+
-| filetype        | filetype:pdf      | Encontre arquivos PDF relacionados a um determinado termo.  |
-+-----------------+-------------------+-------------------------------------------------------------+
-| inurl           | inurl:tango.com   | Pesquisar URLs com palavras específicas.                    |
-+-----------------+-------------------+-------------------------------------------------------------+
-| intext          | intext:gmail.com  | Pesquisar palavras específicas no código-fonte.             |
-+-----------------+-------------------+-------------------------------------------------------------+
++-----------------+-------------------+--------------------------------------------+
+| Operator/Syntax | Example           | Function                                   |
++-----------------+-------------------+--------------------------------------------+
+| Site            | site:tango.com    | Search for a specific site.                |
++-----------------+-------------------+--------------------------------------------+
+| Related         | related:tango.com | Search for related sites.                  |
++-----------------+-------------------+--------------------------------------------+
+| ""              | "phrase or word"  | Find results with exact search phrase.     |
++-----------------+-------------------+--------------------------------------------+
+| filetype        | filetype:pdf      | Find PDF files related to a certain term.  |
++-----------------+-------------------+--------------------------------------------+
+| inurl           | inurl:tango.com   | Search for URLs with such specific words.  |
++-----------------+-------------------+--------------------------------------------+
+| intext          | intext:gmail.com  | Search for specific words in source code.  |
++-----------------+-------------------+--------------------------------------------+
                     </pre>
 
-                    <p>Se você fizer uma pesquisa como na ilustração abaixo, verá que, com uma simples pesquisa no Google, podemos listar alguns subdomínios do tango.</p>
+                    <p>If you perform a search as illustrated below, you will see that with just a simple Google search, we can list some tango subdomains.</p>
 
                     <pre class="medium-frame">
-+---[ navegador ]--------------------------------------------+
++---[ browser ]----------------------------------------------+
 |                                                            |
 |                                                            |
 |                                                            |
@@ -104,16 +104,16 @@
 |              +------------------------------+              |
 |              | site:*.tango.com             |              |
 |              +------------------------------+              |
-|                          Pesquisar                         |
+|                           Search                           |
 |                                                            |
 |                                                            |
 |                                                            |
 +------------------------------------------------------------+
                     </pre>
                         
-                    <p>Também podemos usar esses operadores juntos para localizar uma página/arquivo específico.</p>
+                    <p>We can also use these operators together to find a specific page/file.</p>
                     <pre class="medium-frame">
-+---[ navegador ]--------------------------------------------+
++----[ browser ]---------------------------------------------+
 |                                                            |
 |                                                            |
 |                                                            |
@@ -121,7 +121,7 @@
 |              +------------------------------+              |
 |              | site:*.tango.com inurl:login |              |
 |              +------------------------------+              |
-|                          Pesquisar                         |
+|                           Search                           |
 |                                                            |
 |                                                            |
 |                                                            |
@@ -130,21 +130,21 @@
                 <li id="crt-sh">
                     <h3>[ crt.sh ]</h3>
                     <p>
-                        Ao direcionarmos nosso reconhecimento para a coleta de informações sobre subdomínios, podemos aproveitar os recursos do site <a href="https://crt.sh/">https://crt.sh/</a>. Esse site oferece um serviço exclusivo que nos permite analisar as informações sobre o certificado SSL do nosso alvo. Ao fazer isso, podemos descobrir quaisquer domínios que estejam diretamente associados ao certificado.
+                        By directing our reconnaissance towards gathering valuable information about subdomains, we can take advantage of the resources of the <a href="https://crt.sh/">https://crt.sh/</a> website. This website offers a unique service that allows us to delve into the information on our tango's SSL certificate. By doing so, we can discover any domains that are directly associated with their certificate.
                     </p>
                 </li>
                 <li id="dnsrecon">
                     <h3>[ dnsrecon ]</h3>
                     <p>
-                        Quando falamos de dns, a primeira ferramenta que deve vir à mente é o dnsrecon; com essa ferramenta, podemos fazer todos os tipos de listagem de domínios, desde pesquisas no bing, yandex, crt.sh, até mesmo dicionários de força bruta. Podemos dizer que o dnsrecon é um canivete suíço para DNS.
+                        When we talk about dns, the first tool that should come to mind is dnsrecon; with this tool, we can do all kinds of domain listing, from searches on bing, yandex, crt.sh, to even brute force dictionaries.
                     </p>
                     <p>
-                        Conforme mencionado acima, você também pode usar a ferramenta dnsrecon para consultar o crt.sh. Particularmente falando, eu prefiro usar o dnsrecon pela sua simplicidade e praticidade, em vez do site.
+                        As mentioned above, you can also use the dnsrecon tool to query crt.sh. I prefer to use dnsrecon for its simplicity and practicality, rather than the website.
                     </p>
 
                     <pre class="medium-frame-terminal">
 +---[ terminal ]-----------------------------------------------------+
-| <span class="color-red medium-frame-terminal">blackcrw@4forward:~$</span> dnsrecon -d tango.com -t crt                  |
+| <span class="color-green medium-frame-terminal">blackcrw@4forward:~$</span> dnsrecon -d tango.com -t crt                  |
 | [*] crt: Performing Crt.sh Search Enumeration against tango.com... |
 | [*] 	 A saudedigital.tango.com 181.35.40.31                       |
 | [*] 	 A saudedigitalvr.tango.com 181.35.40.31                     |
@@ -162,39 +162,39 @@
 +--------------------------------------------------------------------+
                     </pre>
 
-                    <p><b class="color-red">Observação:</b> o domínio tango.com é fictício, e os endereços IP foram digitados aleatoriamente.</p>
+                    <p><b class="color-red">note:</b> the domain tango.com is fictitious, and the ip addresses I typed in randomly.</p>
                     <p>
-                        O site <a href="https://hackertarget.com/find-dns-host-records/" target="_blank">https://hackertarget.com/find-dns-host-records/</a> nos permite encontrar registros de host DNS para um domínio específico, possibilitando, assim, catalogar subdomínios-alvo.
+                        The website <a href="https://hackertarget.com/find-dns-host-records/" target="_blank">https://hackertarget.com/find-dns-host-records/</a> allows us to find DNS host records for a specific domain, thus enabling us to catalog target subdomains.
                     </p>
                 </li id="wappalyzer">
                 <li>
                     <h3>[ Wappalyzer ]</h3>
                     <p>
-                        Podemos usar o Wappalyzer para descobrir quais framework front/back-end o alvo está executando nesse site. Essas são informações simples, mas serão úteis em nossos objetivos futuros, pois nos permitirão testar outra gama de vulnerabilidades.
+                        We can use Wappalyzer to find out which front/back-end frameworks the target is running on that site. This is simple information, but it will be useful in our future goals, as it will allow us to test for another range of vulnerabilities.
                     </p>
-                    <p>O Wappalyzer é uma extensão de navegador, disponível para download nas lojas do Google Chrome e do Firefox.</p>
+                    <p>Wappalyzer is a browser extension, available for download from the Google Chrome and Firefox stores.</p>
                     <p>
-                        Essa extensão extremamente útil retorna dados como o sistema operacional do servidor, a versão do sistema, a linguagem de programação da página e etc.
+                        This extremely useful extension returns data such as the server's operating system, system version, page programming language and so on.
                     </p>
                 </li>
                 <li id="shodan">
                     <h3>[ Shodan ]</h3>
                     <p>
-                        Usando o IP do servidor ou o DNS obtido com a ferramenta dnsrecon, podemos pesquisar na Internet esse IP específico. Para esse processo, temos um grande aliado, o Shodan, também conhecido como o Google dos hackers.
-                    </p>
+                        Using the server IP or DNS obtained using the dnsrecon tool, we can search the internet for that particular IP. For this process we have a great ally, Shodan, also known as the hacker's Google.
+                        </p>
                     <p>
-                        Se você acessar <a href="https://www.shodan.io" target="_blank">https://shodan.io</a>, verá que há um campo de pesquisa, basta digitar o endereço IP e você verá uma série de informações. Informações como portas abertas, possíveis vulnerabilidades e você nem precisa se comunicar diretamente com o servidor.
+                        If you go to <a href="https://www.shodan.io" target="_blank">https://shodan.io</a>, you'll see that there's a search field, just enter the IP address and you'll see a range of information appear. Information such as open ports, possible vulnerabilities and you don't even have to communicate directly with the server.
                     </p>
                 </li>
                 <li id="conclusion">
                     <h3>[ Conclusão ]</h3>
-                    <p>Neste paper, você aprendeu como realizar a primeira fase de uma operação de pentest ou red team, que é o reconhecimento do alvo.<p>
-                    <p>Agora, gostaria de agradecê-lo por ter chegado até aqui e espero ter contribuído de alguma forma para seus estudos.</p>
+                    <p>In this paper you have learned how to carry out the first phase of a pentest/red team operation, which is target reconnaissance.<p>
+                    <p>Now I'd like to thank you for making it this far, and I hope that I've been able to contribute in some way to your studies.</p>
                 </li>
             </ul>
             <footer>
                 <pre class="paper-text">
-[ <a href="../../members/blkz.html" target="_blank">@blkz</a> ] [ <a href="https://github.com/blkzy" target="_blank">github</a> ]
+[ <a href="https://4forward-secure.github.io/members/blkzy.html" target="_blank">@blkz</a> ] [ <a href="https://github.com/blkzy" target="_blank">github</a> ]
                 </pre>
             </footer>
         </div>  
