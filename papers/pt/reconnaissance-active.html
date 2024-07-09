@@ -29,19 +29,19 @@
             </pre>
         </header>
 
-        <h1>:: Reconnaissance Active ::</h1>
+        <h1>:: Reconhecimento Ativo ::</h1>
 
         <summary class="color-violet font-weight-700">
             <pre>  
-+------SUMMARY--------+
++-------RESUMO--------+
 |                     |
-| <a href="#introduction"><b>[1]</b> Introduction</a>    |
+| <a href="#introduction"><b>[1]</b> Introdução</a>      |
 | <a href="#ping"><b>[2]</b> Ping        </a>    |
 | <a href="#whois"><b>[3]</b> whois       </a>    |
 | <a href="#traceroute"><b>[4]</b> Traceroute  </a>    |
 | <a href="#nmap"><b>[5]</b> Nmap        </a>    |
 | <a href="#dnsrecon"><b>[6]</b> DNSRecon    </a>    |
-| <a href="#conclusion"><b>[7]</b> Conclusion  </a>    |
+| <a href="#conclusion"><b>[7]</b> conclusão  </a>     |
 |                     |
 +---------------------+
             </pre>
@@ -50,29 +50,29 @@
         <div class="content">
             <ul>
                 <li id="introduction">
-                    <h2 class="color-violet">:: [1] Introduction</h2>
+                    <h2 class="color-violet">:: [1] Introdução</h2>
 
                     <p>
-                        For a reconnaissance to be considered active, it is necessary to establish some type of contact with the target, which can range from social engineering techniques to a direct connection with the target system.
+                        Para que um reconhecimento seja considerado ativo é necessário estabelecer algum tipo de contato com o alvo, que pode variar desde técnicas de engenharia social até uma conexão direta com o sistema alvo.
                     </p>
 
                     <br>
 
                     <p>
-                        Active reconnaissance begins when there are direct connections to the target machine, these are actions that leave information in the system logs and can be identified as a possible intrusion.
+                        O reconhecimento ativo começa quando há conexões diretas com a máquina alvo, são ações que deixam informações nos logs do sistema e podem ser identificadas como uma possível intrusão.
                     </p>
                 </li>
                 <li id="ping">
                     <h2 class="color-violet">:: [2] Ping</h2>
                     
                     <p>
-                        The purpose of the ping command is to check whether a machine is online, generally passing IP address (Internet Protocol address) or domain name as an argument.
+                        O objetivo do comando ping é verificar se uma máquina está online, geralmente passando um endereço IP (endereço de protocolo de Internet) ou nome de domínio como argumento.
                     </p>
 
                     <br>
 
                     <p>
-                        Ping sends an ICMP packet to a system and the system responds by sending back an ICMP Echo Reply <b>if</b> the packet is not blocked by any firewall (network security device that monitors incoming and outgoing network traffic).
+                        O Ping envia um pacote ICMP para um sistema e o sistema responde enviando de volta uma resposta de eco ICMP <b>se</b> o pacote não estiver bloqueado por nenhum firewall (dispositivo de segurança de rede que monitora o tráfego de entrada e saída da rede).
                     </p>
 
                     <br>
@@ -95,7 +95,7 @@
                     <h2 class="color-violet">:: [3] Whois</h2>
                     
                     <p>
-                        The whois command sends a direct query to the WHOIS server to obtain information about the domain, it requires an explicit request to the WHOIS server
+                        O comando whois envia uma consulta direta ao servidor WHOIS para obter informações sobre o domínio, requer uma solicitação explícita ao servidor WHOIS.
                     </p>
 
                     <br>
@@ -119,19 +119,19 @@
                     <h2 class="color-violet">:: [4] Traceroute</h2>
                     
                     <p>
-                        The function of traceroute is to trace the route taken by the packet from your system to another host, thus finding the IP addresses of the routers or hops it travels.
+                        A função do traceroute é rastrear a rota percorrida pelo pacote do seu sistema para outro host, encontrando assim os endereços IP dos roteadores ou saltos que ele percorre.
                     <p>
 
                     <br>
 
                     <p>
-                        The command also reveals the number of routers between the two systems. However, the route taken by packets may change because some routers use dynamic routing protocols that adapt to network changes.
+                        O comando também revela o número de roteadores entre os dois sistemas. No entanto, a rota seguida pelos pacotes pode mudar porque alguns roteadores usam protocolos de roteamento dinâmico que se adaptam às mudanças na rede.
                     </p>
 
                     <br>
 
                     <p>
-                        The parts in <b class="color-red">red</b> are IP addresses or domains that I created
+                        As partes em <b class="color-red">vermelho</b> são endereços IP ou domínios que eu criei.
                     </p>
                     
                     <br>
@@ -156,20 +156,20 @@
                     <h2 class="color-violet">:: [5] Nmap</h2>
 
                     <p>
-                        Active reconnaissance with Nmap is a technique used to discover active devices on a network and information about them, such as operating systems, running services and open ports. 
+                        O reconhecimento ativo com Nmap é uma técnica usada para descobrir dispositivos ativos em uma rede e informações sobre eles, como sistemas operacionais, serviços em execução e portas abertas.
                     <p>
 
                     <br>
                     <p>
-                      <b class="color-red">-sS</b>: This argument indicates a SYN scan (does not complete a connection) so it is a quick and silent scan 
+                      <b class="color-red">-sS</b>: Este argumento indica uma varredura SYN (não completa a conexão), portanto é uma varredura rápida e silenciosa.
                     <p>
                     <p>
-                      <b class="color-red">-O</b>: This argument serves to try to identify the target's operating system
+                      <b class="color-red">-O</b>: Este argumento serve para tentar identificar o sistema operacional do alvo.
                     </p>
 
                     <br>
 
-                    <p>The parts in <b class="color-red">red</b> are IP addresses or domains that I created</p>
+                    <p> As partes em <b class="color-red">vermelho</b> são endereços IP ou domínios que eu criei.</p>
 
                     <br>
 
@@ -190,19 +190,19 @@
                 <li id="dnsrecon">
                     <h2 class="color-violet">:: [6] DNSRecon</h2>
                     <p>
-                        DNSrecon is an open source tool generally used to discover information about the DNS record (Domain Name System - System that translates domain names to IP addresses). 
+                        DNSrecon é uma ferramenta de código aberto geralmente usada para descobrir informações sobre o registro DNS (Domain Name System - Sistema que traduz nomes de domínio em endereços IP).
                     </p>
 
                     <br>
 
                     <p>
-                        In active reconnaissance we use DNSrecon to explore the DNS of a domain or network and thus map subdomains, enumerate hosts and collect DNS records.    
+                        No reconhecimento ativo utilizamos o DNSrecon para explorar o DNS de um domínio ou rede e assim mapear subdomínios, enumerar hosts e coletar registros DNS.    
                     </p>
 
                     <br>
 
-                    <p>
-                        The parts in <b class="color-red">red</b> are IP addresses or domains that I created
+                    <p> 
+                        As partes em <b class="color-red">vermelho</b> são endereços IP ou domínios que eu criei.
                     </p>
 
                     <br>
@@ -221,16 +221,16 @@
                     </pre>
                 </li>
                 <li id="conclusion">
-                    <h2 class="color-violet">:: [7] Conclusion</h2>
+                    <h2 class="color-violet">:: [7] Conclusão</h2>
 
                     <p>
-                        Reconnaissance in general is a very important part of an attack and active reconnaissance is the last part of reconnaissance for the next stage. 
+                        O reconhecimento em geral é uma parte muito importante de um ataque e o reconhecimento ativo é a última parte do reconhecimento para a próxima fase.
                     </p>
             
                     <br>
                     
                     <p>
-                        However, remember that active reconnaissance generates logs, and some techniques can be identified as attacks. Therefore, carry out this step with caution and responsibility.
+                        Porém, lembre-se que o reconhecimento ativo gera logs e algumas técnicas podem ser identificadas como ataques. Portanto, execute esta etapa com cautela e responsabilidade.
                     </p>
                 </li>
             </ul>
